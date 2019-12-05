@@ -1,5 +1,5 @@
 ip=`curl -s -H "Metadata-Flavor: Google"  \
-  "http://metadata.google.internal/computeMetadata/v1/instance/attributes/ip"`
+ "http://metadata.google.internal/computeMetadata/v1/instance/network-interfaces/0/access-configs/0/external-ip"`
 
 key=`curl -s -H "Metadata-Flavor: Google"  \
   "http://metadata.google.internal/computeMetadata/v1/instance/attributes/p"`
