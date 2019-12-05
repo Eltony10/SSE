@@ -10,3 +10,5 @@ sudo apt-get install -y git nodejs
     cd distributed-master-worker
     npm install
     sudo npm run client $key $ip
+wait
+sudo poweroff
