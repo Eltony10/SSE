@@ -12,7 +12,7 @@ for i in `seq 1 $1`
           --zone=europe-west1-c \
           --metadata=p=$key,address=$ip \
           --metadata-from-file  \
-             startup-script=vm-script.sh  \
+             startup-script=client-startup.sh  \
           --scopes=https://www.googleapis.com/auth/cloud-platform\
           vm$i
     done
