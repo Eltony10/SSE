@@ -8,7 +8,7 @@ key=`curl -s -H "Metadata-Flavor: Google"  \
 for i in `seq 1 $1`
     do
 	    gcloud compute instances create  \
-          --machine-type f1-micro  \
+          --machine-type=n1-standard-1 \
           --zone=europe-west1-c \
           --metadata=p=$key,ip=$ip \
           --metadata-from-file  \
