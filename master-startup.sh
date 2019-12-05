@@ -15,5 +15,5 @@ sudo apt-get install -y git nodejs
 wait
 for i in `seq 1 $1`
     do
-	    gcloud compute instances delete vm$i --delete-disks=all --zone=europe-west1-c
+	gcloud compute instances delete vm$i --delete-disks=all --zone=europe-west1-c
     done
