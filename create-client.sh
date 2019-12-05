@@ -1,4 +1,4 @@
-key=`curl -s -H "Metadata-Flavor: Google"  \
+ip=`curl -s -H "Metadata-Flavor: Google"  \
   "http://metadata.google.internal/computeMetadata/v1/instance/attributes/ip"`
 
 key=`curl -s -H "Metadata-Flavor: Google"  \
@@ -10,7 +10,7 @@ for i in `seq 1 $1`
 	    gcloud compute instances create  \
           --machine-type f1-micro  \
           --zone=europe-west1-c \
-          --metadata=p=$key,address=$ip \
+          --metadata=p=$key,ip=$ip \
           --metadata-from-file  \
              startup-script=client-startup.sh  \
           --scopes=https://www.googleapis.com/auth/cloud-platform\
