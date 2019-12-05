@@ -3,7 +3,7 @@
 key=`openssl rand -base64 32`
 
 gcloud compute instances create  \
-    --machine-type f1-micro  \
+    --machine-type n1-standard-1  \
     --zone=europe-west1-c \
     --metadata=p=$key \
     --metadata-from-file  \
